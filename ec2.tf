@@ -88,7 +88,7 @@ EOF
 #     systemctl start docker
 #     usermod -aG docker ec2-user
 
-#     # Install Docker Compose v2
+
 #     mkdir -p /usr/libexec/docker/cli-plugins
 #     curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-linux-x86_64 \
 #       -o /usr/libexec/docker/cli-plugins/docker-compose
@@ -162,3 +162,4 @@ resource "aws_instance" "web" {
     Name = "${var.project}-web-${each.key}"
   }
 }
+
